@@ -1,0 +1,119 @@
+.moviescard {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    max-width: 360px;
+    width: 100%;
+    overflow: hidden;   
+}
+
+.moviescard__picture {    
+    max-height: 201px;
+    display: block;
+    margin-bottom: 14px;
+    border-radius: 10px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.moviescard__picture:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.moviescard__button-save {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    width: 72px;
+    height: 21px;
+    background-color: #313131;
+    color: #FFFFFF;
+    font-family: 'Inter', Helvetica, Arial, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 9px;
+    border-radius: 30px;
+    padding: 0;
+    border: 0;
+}
+.moviescard__button-save:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.moviescard__saved-button {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    background-color: transparent;
+    background-image: url('../../images/save.svg');
+    width: 21px;
+    height: 21px;
+    border: none;
+    padding: 0;
+}
+.moviescard__saved-button:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.moviescard__delete-button {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    background-color: transparent;
+    background-image: url(../../images/delete.svg);
+    width: 21px;
+    height: 21px;
+    border: none;
+    padding: 0;
+}
+.moviescard__delete-button:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.moviescard__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 332px;
+    width: 100%;
+}
+
+.moviescard__title {
+    color: #FFFFFF;
+    font-family: 'Inter', Helvetica, Arial, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 15.73px;
+    margin: 0;
+    white-space: nowrap;
+}
+
+.moviescard__duration {
+    color: #8B8B8B;
+    font-family: 'Inter', Helvetica, Arial, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 10px;
+    text-align: center;
+    background-color: #2F2F2F;
+    width: 52px;
+    height: 14px;
+    border: none;
+    border-radius: 3px;
+    margin: 0;
+    padding-top: 4px;    
+}
+
+@media screen and (max-width: 717px) {
+    .moviescard__title {
+        font-size: 12px;
+    }   
+}

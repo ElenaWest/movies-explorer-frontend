@@ -1,0 +1,168 @@
+.aboutme {
+    color: #FFFFFF;
+    max-width: 1140px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.aboutme__title {
+    font-family: 'Inter', Helvetica, Arial, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 26.63px;
+    letter-spacing: -0.04em;
+    border-bottom: 1px solid rgb(218, 218, 218);
+    margin-top: 110px;
+    margin-bottom: 0;
+    padding-bottom: 23px;
+}
+
+.aboutme__table {
+    margin-top: 66px;
+    display: grid;
+    grid-template-columns: 600px 270px;
+    column-gap: 270px;
+    grid-template-rows: 76px 46px 187px 17px;
+    grid-template-areas:
+    "name photo"
+    "status photo"
+    "text photo"
+    "github photo"
+}
+
+.aboutme__name {
+    grid-area: name;
+    font-family: 'Inter', Helvetica, Arial, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 58px;
+    letter-spacing: -0.04em;
+    margin: 0;
+    padding-bottom: 18px;
+}
+
+.aboutme__status {
+    grid-area: status;
+    font-family: 'Inter', Helvetica, Arial, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 20px;
+    margin: 0;
+    padding-bottom: 26px;  
+}
+
+.aboutme__text {
+    grid-area: text;
+    font-family: 'Inter', Helvetica, Arial, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    margin: 0;
+}
+
+.aboutme__github {
+    grid-area: github;
+    font-family: 'Inter', Helvetica, Arial, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16.94px;
+    text-decoration: none;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+.aboutme__github:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.aboutme__photo {
+    grid-area: photo;
+    max-width: 270px;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 1152px) {
+    .aboutme {
+        max-width: 668px;
+    }
+    .aboutme__title {
+        margin-top: 90px;
+    }
+    .aboutme__table {
+        grid-template-columns: 364px 255px;
+        column-gap: 49px;
+        grid-template-rows: 56px 38px 195px 17px;
+    }    
+    .aboutme__name {
+        font-size: 40px;
+        line-height: 40px;
+        padding-bottom: 16px;
+    }    
+    .aboutme__status {
+        font-size: 12px;
+        line-height: 18px;
+        padding: 0; 
+    }    
+    .aboutme__text {
+        font-size: 12px;
+        line-height: 18px;
+    }    
+    .aboutme__photo {
+        max-width: 255px;
+        height: 100%;
+        border-radius: 10px;
+    }
+}
+
+@media screen and (max-width: 717px) {
+    .aboutme {
+        max-width: 292px;
+    }    
+    .aboutme__title {
+        font-size: 18px;
+        line-height: 21.78px;
+        margin-top: 70px;
+        padding-bottom: 28px;
+    }    
+    .aboutme__table {
+        margin-top: 60px;
+        grid-template-columns: 292px;
+        column-gap: 0px;
+        grid-template-rows: 392px 56px 36px 152px 57px;
+        grid-template-areas:
+        "photo"
+        "name"
+        "status"
+        "text"
+        "github"
+    }    
+    .aboutme__name {
+        font-size: 30px;
+        line-height: 36.31px;
+    }    
+    .aboutme__status {
+        font-size: 11px;
+        line-height: 26px; 
+    }    
+    .aboutme__text {
+        font-size: 11px;
+        line-height: 16px;
+    }    
+    .aboutme__photo {
+        max-width: 292px;
+        width: 100%;
+        height: 352px;
+    }
+    .aboutme__github {
+        padding-top: 40px;
+    }
+}
