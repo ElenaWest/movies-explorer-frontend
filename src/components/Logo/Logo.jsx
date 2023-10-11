@@ -3,9 +3,9 @@ import './Logo.css';
 
 function Logo() {
     return(
-        <>
-        <NavLink to="/" className="logo" />
-        </>
+        <div className='logo'>
+        <NavLink to="/" className="logo__link" />
+        </div>
     );
 }
 

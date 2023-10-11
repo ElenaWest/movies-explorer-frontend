@@ -80,7 +80,7 @@
     margin: 0;
 }
 
-@media screen and (max-width: 1152px) {
+@media screen and (max-width: 1156px) {
     .techs__title {
         max-width: 668px;
     }
@@ -103,7 +103,7 @@
     }
 }
 
-@media screen and (max-width: 717px) {
+@media screen and (max-width: 748px) {
     .techs__title {
         max-width: 284px;
         padding-bottom: 28px;
@@ -112,7 +112,7 @@
         line-height: 21.78px;
     }
     .techs__technologies {
-        margin-top: 80px;
+        margin-top: 60px;
         font-size: 30px;
         line-height: 36.31px;
     }

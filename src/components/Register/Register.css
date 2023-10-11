@@ -156,7 +156,7 @@
 
 @media screen and (max-width: 768px) {
     .register__container {
-        margin-top: 232px;
+        margin-top: 214px;
     }
     .register__button {
         margin-top: 69px;
@@ -164,17 +164,20 @@
     .register__question-container {
         margin-bottom: 232px;
     }
+    .register__title {
+        margin-top: 22px;
+    }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 420px) {
     .register__container {
-        margin-top: 56px;
+        margin-top: 38px;
         align-items: center;
         max-width: 260px;
         width: 100%;
     }
     .register__title {
-        margin-top: 50px;
+        margin-top: 32px;
     }
     .register__form {
         margin: 80px auto 0;

@@ -98,19 +98,22 @@
     padding-top: 4px;    
 }
 
-@media screen and (max-width: 1152px) {
+@media screen and (max-width: 1156px) {
     .movies-card__picture {
         margin-bottom: 25px;
     }
+    .movies-card__picture {
+        max-width: 339px;
+    }
 }
 
-@media screen and (max-width: 717px) {
+@media screen and (max-width: 748px) {
     .movies-card__title {
         font-size: 12px;
         max-width: 240px;
     }
     .movies-card__picture {
-        max-height: 168px;
+        max-width: 300px;
         margin-bottom: 16px;
     }
     .movies-card__button {

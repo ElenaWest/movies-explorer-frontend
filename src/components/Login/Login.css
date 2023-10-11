@@ -157,7 +157,7 @@
 
 @media screen and (max-width: 768px) {
     .login__container {
-        margin-top: 232px;
+        margin-top: 214px;
     }
     .login__button {
         margin-top: 157px;
@@ -165,17 +165,20 @@
     .login__question-container {
         margin-bottom: 232px;
     }
+    .login__title {
+        margin-top: 22px;
+    }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 420px) {
     .login__container {
-        margin-top: 56px;
+        margin-top: 38px;
         align-items: center;
         max-width: 260px;
         width: 100%;
     }
     .login__title {
-        margin-top: 50px;
+        margin-top: 32px;
     }
     .login__form {
         margin: 80px auto 0;

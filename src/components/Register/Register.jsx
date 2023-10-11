@@ -14,7 +14,7 @@ function Register() {
                         <input
                         name='name'
                         id='name'
-                        type='name' 
+                        type='text' 
                         placeholder='Имя'
                         defaultValue='Виталий' 
                         className='register__input'

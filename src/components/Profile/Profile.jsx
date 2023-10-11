@@ -15,7 +15,7 @@ function Profile({ loggedIn }) {
                         <input
                         name='name'
                         id='name'
-                        type='name' 
+                        type='text' 
                         placeholder='Виталий' 
                         className='profile__input'
                         minLength={2}

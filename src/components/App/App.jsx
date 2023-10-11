@@ -12,7 +12,7 @@ import Profile from '../Profile/Profile.jsx';
 function App() {
   return (
     // <CurrentUserContext.Provider>
-      <div className='page__container'>
+      <div className='app'>
         <Routes>
           <Route path='/' element={<Main />} />
           <Route path='/movies' element={<Movies />} />

@@ -1,4 +1,4 @@
-.filter-checkbox__container {
+.filter-checkbox {
     max-width: 1140px;
     width: 100%;
     margin: 0 auto;
@@ -54,13 +54,13 @@
     background-image: url('../../images/TumbOff.svg');
 }
 
-@media screen and (max-width: 1152px) {
-    .filter-checkbox__container {
+@media screen and (max-width: 1156px) {
+    .filter-checkbox {
         margin-top: 40px;
     }
 }
 
-@media screen and (max-width: 717px) {
+@media screen and (max-width: 748px) {
     .filter-checkbox__label {
         font-size: 11px;
     }

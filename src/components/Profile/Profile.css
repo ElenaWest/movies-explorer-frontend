@@ -142,7 +142,7 @@
     opacity: 0.8;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 748px) {
     .profile__title {
         margin-bottom: 79px;
         margin-top: 236px;

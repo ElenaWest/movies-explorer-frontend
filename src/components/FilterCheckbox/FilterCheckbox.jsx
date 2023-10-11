@@ -2,7 +2,7 @@ import './FilterCheckbox.css';
 
 function FilterCheckbox() {
     return(
-        <div className='filter-checkbox__container'>
+        <div className='filter-checkbox'>
             <input
             type='checkbox'
             className='filter-checkbox__button'
