@@ -1,17 +1,19 @@
 import { NavLink } from 'react-router-dom';
 import './Login.css';
+import Logo from '../Logo/Logo';
 
 function Login() {
     return (
         <main className='login'>
             <div className='login__container'>
-                <NavLink to="/" className="login__logo" />
+                <Logo />
                 <h1 className='login__title'>Рады видеть!</h1>
-                <form className='login__form'>
+                <form className='login__form' name='login'>
                     <p className='login__form-input'>
-                        <label className='login__label' for='email'>E-mail</label>
+                        <label className='login__label' htmlFor='email' >E-mail</label>
                         <input
-                        name='email' 
+                        name='email'
+                        id='email' 
                         type='email' 
                         placeholder='Почта'
                         defaultValue='pochta@yandex.ru'
@@ -19,9 +21,10 @@ function Login() {
                         required
                         ></input>
                         <span className='login__span'></span>
-                        <label className='login__label' for='password'>Пароль</label>
+                        <label className='login__label' htmlFor='password'>Пароль</label>
                         <input
-                        name='password' 
+                        name='password'
+                        id='password'
                         type='password' 
                         placeholder='Пароль' 
                         className='login__input'

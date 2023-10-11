@@ -17,16 +17,28 @@
     font-size: 24px;
     line-height: 29.05px;
     margin-top: 74px;
-    margin-bottom: 123px;
+    margin-bottom: 106px;
     color: #FFFFFF;
 }
 
 .profile__container-input {
     display: flex;
-    flex-direction: column;
-    position: relative;    
+    flex-direction: column;   
     color: #FFFFFF;
 }
+
+.profile__container-line {
+    display: flex;
+    justify-content: space-between;
+    width: 410px;
+    border-bottom: 1px solid rgb(66, 66, 66);
+    margin: 17px 0 0;
+}
+
+.profile__container-line:last-of-type {
+    border: none;
+}
+
 .profile__label {
     color: #FFFFFF;
     font-family: 'Inter', Helvetica, Arial, sans-serif;
@@ -42,32 +54,21 @@
     outline: none;
     text-align: end;
     padding: 0 0 16px;
-    width: 410px;
     font-family: 'Inter', Helvetica, Arial, sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 11px;
     line-height: 13.31px;
     border: none;
-    border-bottom: 1px solid rgb(66, 66, 66); 
+    outline: none;
+}
+
+.profile__input:focus {
+  outline: 2px solid #3DDC84;
 }
 
 .profile__input::placeholder {
     color: #FFFFFF;
-}
-
-.profile__input:last-of-type {
-    border: none;
-    padding: 16px 0 0;
-}
-
-.profile__label-name {
-    position: absolute;    
-}
-
-.profile__label-email {
-    position: absolute;
-    bottom: 0;
 }
 
 .profile__edit {
@@ -80,7 +81,7 @@
     font-weight: 400;
     font-size: 13px;
     line-height: 15.73px;
-    margin-top: 220px;
+    margin-top: 204px;
     margin-bottom: 16px;
 }
 
@@ -130,7 +131,7 @@
     line-height: 16.94px;
 }
 
-.profile__button-disabled {
+.profile__button_disabled {
     background-color: #f8f8f8;
     color: #c2c2c2;
     cursor: default;
@@ -143,11 +144,11 @@
 
 @media screen and (max-width: 768px) {
     .profile__title {
-        margin-bottom: 96px;
+        margin-bottom: 79px;
         margin-top: 236px;
     }
     .profile__edit {
-        margin-top: 210px;
+        margin-top: 194px;
     }
     .profile__log-out {
         margin-bottom: 269px;
@@ -162,14 +163,14 @@
 
 @media screen and (max-width: 425px) {
     .profile__title {
-        margin-bottom: 80px;
+        margin-bottom: 63px;
         margin-top: 70px;
     }
-    .profile__input {
+    .profile__container-line {
         width: 260px;
     }
     .profile__edit {
-        margin-top: 379px;
+        margin-top: 363px;
         margin-bottom: 16px;
         font-size: 12px;
         line-height: 14.52px;

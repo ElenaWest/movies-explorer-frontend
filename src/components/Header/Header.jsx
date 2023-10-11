@@ -1,12 +1,12 @@
+import Logo from '../Logo/Logo.jsx';
 import Navigation from '../Navigation/Navigation';
 import './Header.css';
-import { NavLink } from 'react-router-dom';
 
-function Header() {
+function Header({ loggedIn }) {
     return(
         <header className='header'>
-            <NavLink to="/" className="header__logo" />            
-            <Navigation />                       
+            <Logo />           
+            <Navigation loggedIn={loggedIn}/>                       
         </header>
     );
 }

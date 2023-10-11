@@ -50,6 +50,7 @@
     margin-top: 100px;
     margin-bottom: 100px;
     list-style-type: none;
+    padding: 0;
 }
 
 .techs__icon {
@@ -71,11 +72,11 @@
     align-items: center;
 }
 
-.techs_icon:last-of-type {
+.techs__icon:last-of-type {
     margin-right: 0;
 }
 
-.techs__icon_text {
+.techs__icon-text {
     margin: 0;
 }
 
@@ -84,7 +85,7 @@
         max-width: 668px;
     }
     .techs__technologies {
-        margin-top: 60px;
+        margin-top: 80px;
     }
     .techs__text {
         line-height: 18px;

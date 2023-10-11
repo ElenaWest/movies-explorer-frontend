@@ -1,4 +1,4 @@
-.filtercheckbox__container {
+.filter-checkbox__container {
     max-width: 1140px;
     width: 100%;
     margin: 0 auto;
@@ -11,28 +11,13 @@
     padding-bottom: 39px;
 }
 
-.filtercheckbox__button {
-    background-color: transparent;
-    background-image: url(../../images/TumbON.svg);
-    width: 36px;
-    height: 20px;
-    margin-right: 12px;
-    background-repeat: no-repeat;
-    background-size: contain;
-    border: 0;
-    padding: 3px 1px;
+.filter-checkbox__button {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
 }
 
-.filtercheckbox__button {
-    cursor: pointer;
-    opacity: 0.8;
-}
-
-.filtercheckbox__button-off {
-    background-image: url(../../images/TumbOff.svg);
-}
-
-.filtercheckbox__label {
+.filter-checkbox__label {
     font-family: 'Inter', Helvetica, Arial, sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -41,10 +26,42 @@
     color: #FFFFFF;
     display: inline-flex;
     align-items: center;
+    user-select: none;
+}
+.filter-checkbox__button + .filter-checkbox__label::before {
+    content: '';
+    background-image: url('../../images/TumbON.svg');
+    display: inline-block;
+    width: 36px;
+    height: 20px;
+    margin-right: 14px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: none;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.filter-checkbox__button + .filter-checkbox__label:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.filter-checkbox__button:checked + .filter-checkbox__label::before {
+    width: 36px;
+    height: 20px;
+    background-image: url('../../images/TumbOff.svg');
+}
+
+@media screen and (max-width: 1152px) {
+    .filter-checkbox__container {
+        margin-top: 40px;
+    }
 }
 
 @media screen and (max-width: 717px) {
-    .filtercheckbox__label {
+    .filter-checkbox__label {
         font-size: 11px;
     }
 }

@@ -1,6 +1,7 @@
-.savedmovies {
+.saved-movies {
     flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 214px;
 }

@@ -2,11 +2,13 @@ import './SavedMovies.css';
 import SearchForm from '../SearchForm/SearchForm.jsx';
 import MoviesCardList from '../MoviesCardList/MoviesCardList.jsx';
 import Footer from '../Footer/Footer.jsx';
+import Header from '../Header/Header.jsx';
 
 function SavedMovies() {
     return(
         <>
-        <main className='savedmovies'>
+        <Header />
+        <main className='saved-movies'>
             <SearchForm />
             <MoviesCardList />
         </main>

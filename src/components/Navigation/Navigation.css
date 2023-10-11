@@ -1,7 +1,15 @@
+.navigation {
+    display: flex;
+    max-width: 1102px;
+    width: 100%;
+    justify-content: flex-end;
+}
+
 .navigation__container {
     display: flex;
     margin-top: 21px;
     max-height: 32px;
+    align-items: center;
 }
 
 .navigation__registration {
@@ -45,8 +53,14 @@
     cursor: pointer;
     opacity: 0.7;
 }
+.navigation__movies-container {
+    max-width: 676px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
 
-.navigation__movies {
+.navigation__movies-list {
     list-style-type: none;
     display: flex;
     margin-top: 28px;
@@ -187,7 +201,23 @@
 
 .navigation__account-burger {
     margin-bottom: 90px;
-}    
+}
+
+@media screen and (max-width: 1152px) {
+    /* Удалить!!! */
+    .navigation__films {
+        color: #202020;
+    }
+    .navigation__account {
+        color: #202020;
+        background-image: url(../../images/burger.svg);
+        background-color: #202020;;
+        background-repeat: no-repeat;
+        width: 44px;
+        height: 44px;
+        border: none;
+    }
+  }
 
 @media screen and (max-width: 717px) {
     .navigation__registration {

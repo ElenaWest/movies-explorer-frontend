@@ -1,11 +1,11 @@
-.aboutproject {
+.about-project {
     max-width: 1140px;
     width: 100%;
     margin: 0 auto;
     color: #FFFFFF;
 }
 
-.aboutproject__title {
+.about-project__title {
     font-family: 'Inter', Helvetica, Arial, sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -18,27 +18,27 @@
     padding-bottom: 23px;
 }
 
-.aboutproject__about {
+.about-project__about {
     display: grid;
-    grid-template-columns: repeat(2, 550px);
+    grid-template-columns: repeat(auto-fill, minmax(284px, 550px));
     column-gap: 40px;
     row-gap: 26px;
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
     grid-auto-flow: column;
+    margin-top: 70px;
 }
 
-.aboutproject__about-title {
+.about-project__about-title {
     font-family: 'Inter', Helvetica, Arial, sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
     line-height: 24.2px;
-    letter-spacing: -0.04em;
-    margin-top: 70px;
-    margin-bottom: 0;
+    letter-spacing: -0.04em;    
+    margin: 0;
 }
 
-.aboutproject__about-text {
+.about-project__about-text {
     font-family: 'Inter', Helvetica, Arial, sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -47,37 +47,34 @@
     margin: 0;
 }
 
-.aboutproject__table {
+.about-project__table {
     display: grid;
     grid-template-columns: 228px 912px;
     text-align: center;
     margin-top: 110px;
 }
 
-.aboutproject__table-one-week {
+.about-project__table-title {
+    margin: 0;
     font-family: 'Inter', Helvetica, Arial, sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 16.94px;
-    background-color: #3DDC84;
-    color: #000000;
     padding: 9px 14px;
-    margin: 0;
 }
 
-.aboutproject__table-weeks {
-    margin: 0;
-    font-family: 'Inter', Helvetica, Arial, sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 16.94px;
+.about-project__table-title_green {    
+    background-color: #3DDC84;
+    color: #000000;    
+}
+
+.about-project__table-title_grey {
     background-color: #303030;
     padding: 9px 14px;
 }
 
-.aboutproject__table-text {
+.about-project__table-text {
     font-family: 'Inter', Helvetica, Arial, sans-serif;
     font-style: normal;
     font-weight:500;
@@ -89,67 +86,64 @@
 }
 
 @media screen and (max-width: 1152px) {
-    .aboutproject {
+    .about-project {
         max-width: 668px;
     }
-    .aboutproject__title {
+    .about-project__title {
         margin-top: 90px;
         margin-bottom: 20px;
     }
-    .aboutproject__about {
-        grid-template-columns: repeat(2, 319px);
+    .about-project__about {
         column-gap: 30px;
         row-gap: 22px;
     }
-    .aboutproject__table {
+    .about-project__table {
         grid-template-columns: 140px 528px;
         margin-top: 93px;
     }
-    .aboutproject__about-text {
+    .about-project__about-text {
         font-size: 12px;
         line-height: 18px;
     }
-    .aboutproject__table-text {
+    .about-project__table-text {
         font-weight: 400;
         margin-bottom: 90px;
     }
 }
 
 @media screen and (max-width: 717px) {
-    .aboutproject {
+    .about-project {
         max-width: 284px;
     }
-    .aboutproject__title {
+    .about-project__title {
         margin-top: 70px;
         font-size: 18px;
         line-height: 21.78px;
+        margin-bottom: 4px;
     }
-    .aboutproject__about {
-        grid-template-columns: 284px;
+    .about-project__about {
         row-gap: 16px;
+        margin-top: 0;
+        grid-auto-flow: row;
     }
-    .aboutproject__about-title {
-        margin-top: 40px;
+    .about-project__about-title {
+        margin-top: 56px;
         font-size: 18px;
         line-height: 21.78px;      
     }
-    .aboutproject__about-text {
+    .about-project__about-text {
         font-size: 11px;
         line-height: 16px;
     }
-    .aboutproject__table {
+    .about-project__table {
         grid-template-columns: 100px 184px;
         margin-top: 60px;
     }
-    .aboutproject__table-one-week {
+    .about-project__table-title {
         font-size: 11px;
         line-height: 13.31px;
     }
-    .aboutproject__table-weeks {
-        font-size: 11px;
-        line-height: 13.31px;
-    }
-    .aboutproject__table-text {
+    .about-project__table-text {
         font-size: 11px;
         line-height: 13.31px;
         margin-bottom: 69px;
