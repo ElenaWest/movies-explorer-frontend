@@ -58,11 +58,6 @@
     line-height: 12.1px;
     color: #8B8B8B;
     margin-bottom: 10px;
-    margin-top: 8px;
-}
-
-.register__label:first-of-type {
-    margin-top: 0;
 }
 
 .register__input {
@@ -82,6 +77,10 @@
     padding-left: 15px;
 }
 
+.register__input:focus {
+    outline: 2px solid #3DDC84;
+}
+
 .register__span {
     color: #EE3465;
     font-family: 'Inter', Helvetica, Arial, sans-serif;
@@ -89,7 +88,7 @@
     font-weight: 400;
     font-size: 10px;
     line-height: 12.1px;
-    margin-top: 10px;
+    margin-top: 8px;
     word-wrap: break-word;
     min-height: 12px;
     display: inline-block;
@@ -126,6 +125,7 @@
     display: flex;
     margin-top: 16px;
     justify-content: center;
+    margin-bottom: 70px;
 }
 
 .register__question {
@@ -156,7 +156,7 @@
 
 @media screen and (max-width: 768px) {
     .register__container {
-        margin-top: 232px;
+        margin-top: 214px;
     }
     .register__button {
         margin-top: 69px;
@@ -164,17 +164,20 @@
     .register__question-container {
         margin-bottom: 232px;
     }
+    .register__title {
+        margin-top: 22px;
+    }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 420px) {
     .register__container {
-        margin-top: 56px;
+        margin-top: 38px;
         align-items: center;
         max-width: 260px;
         width: 100%;
     }
     .register__title {
-        margin-top: 50px;
+        margin-top: 32px;
     }
     .register__form {
         margin: 80px auto 0;

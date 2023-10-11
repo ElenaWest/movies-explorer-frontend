@@ -2,7 +2,6 @@ import './App.css';
 // import CurrentUserContext from '../../context/CurrentUserContext.js';
 import Login from '../Login/Login';
 import Register from '../Register/Register.jsx';
-import Header from '../Header/Header.jsx';
 import SavedMovies from '../SavedMovies/SavedMovies.jsx';
 import Main from '../Main/Main.jsx';
 import Movies from '../Movies/Movies';
@@ -13,8 +12,7 @@ import Profile from '../Profile/Profile.jsx';
 function App() {
   return (
     // <CurrentUserContext.Provider>
-      <div className='page__container'>
-        <Header />
+      <div className='app'>
         <Routes>
           <Route path='/' element={<Main />} />
           <Route path='/movies' element={<Movies />} />

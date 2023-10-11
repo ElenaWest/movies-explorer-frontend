@@ -3,10 +3,10 @@ import FilterCheckbox from '../FilterCheckbox/FilterCheckbox';
 
 function SearchForm() {
     return(
-        <section className='searchform'>
-            <form className='searchform__container'>
-                <input className='searchform__input' placeholder='Фильм'></input>
-                <button className='searchform__button' type='submit'></button>
+        <section className='search-form'>
+            <form className='search-form__container'>
+                <input className='search-form__input' placeholder='Фильм'></input>
+                <button className='search-form__button' type='submit'></button>
             </form>
             <FilterCheckbox />
         </section>

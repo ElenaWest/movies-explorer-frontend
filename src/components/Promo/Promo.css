@@ -1,4 +1,4 @@
-.promo__background {    
+.promo {    
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -26,8 +26,8 @@
     margin: 0;
 }
 
-@media screen and (max-width: 1152px) {
-    .promo__background {
+@media screen and (max-width: 1156px) {
+    .promo {
         max-width: 728px;
     }
     .promo__title {
@@ -35,11 +35,12 @@
         line-height: 52px;
         padding-top: 350px;
         padding-bottom: 314px;
+        max-width: 680px;
     }    
 }
 
-@media screen and (max-width: 717px) {
-    .promo__background {
+@media screen and (max-width: 748px) {
+    .promo {
         max-width: 292px;
     }
     .promo__title {

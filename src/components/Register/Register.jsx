@@ -1,3 +1,4 @@
+import Logo from '../Logo/Logo';
 import './Register.css';
 import { NavLink } from 'react-router-dom';
 
@@ -5,14 +6,15 @@ function Register() {
     return (
         <main className='register'>
             <div className='register__container'>
-                <NavLink to="/" className="register__logo" />
+                <Logo />
                 <h1 className='register__title'>Добро пожаловать!</h1>
-                <form className='register__form'>
+                <form className='register__form'  name='register'>
                     <p className='register__form-input'>
-                        <label className='register__label' for='name'>Имя</label>
+                        <label className='register__label' htmlFor='name'>Имя</label>
                         <input
-                        name='name' 
-                        type='name' 
+                        name='name'
+                        id='name'
+                        type='text' 
                         placeholder='Имя'
                         defaultValue='Виталий' 
                         className='register__input'
@@ -21,9 +23,10 @@ function Register() {
                         required
                         ></input>
                         <span className='register__span'></span>
-                        <label className='register__label' for='email'>E-mail</label>
+                        <label className='register__label' htmlFor='email'>E-mail</label>
                         <input
-                        name='email' 
+                        name='email'
+                        id='email'
                         type='email' 
                         placeholder='Почта'
                         defaultValue='pochta@yandex.ru'
@@ -31,9 +34,10 @@ function Register() {
                         required
                         ></input>
                         <span className='register__span'></span>
-                        <label className='register__label' for='password'>Пароль</label>
+                        <label className='register__label' htmlFor='password'>Пароль</label>
                         <input
-                        name='password' 
+                        name='password'
+                        id='password'
                         type='password' 
                         placeholder='Пароль' 
                         className='register__input'
@@ -48,12 +52,8 @@ function Register() {
                     <p className='register__question'>Уже зарегистрированы?</p>
                     <NavLink to="/signin" className='register__login'>Войти</NavLink>
                 </div>
-            </div>
-            
-
-                   
-        </main>
-        
+            </div>                   
+        </main>        
     )
   }
   

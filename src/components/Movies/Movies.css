@@ -29,7 +29,7 @@
     opacity: 0.8;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 748px) {
     .movies__button {
         max-width: 240px;
         margin-bottom: 0;

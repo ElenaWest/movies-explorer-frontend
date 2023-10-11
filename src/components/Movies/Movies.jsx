@@ -2,10 +2,12 @@ import './Movies.css';
 import SearchForm from '../SearchForm/SearchForm';
 import MoviesCardList from '../MoviesCardList/MoviesCardList';
 import Footer from '../Footer/Footer.jsx';
+import Header from '../Header/Header.jsx';
 
 function Movies() {
     return(
         <>
+        <Header />
         <main className='movies'>
             <SearchForm />
             <MoviesCardList />
