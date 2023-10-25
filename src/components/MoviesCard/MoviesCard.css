@@ -9,7 +9,8 @@
 }
 
 .movies-card__picture {    
-    max-height: 201px;
+    height: 201px;
+    width: 360px;
     display: block;
     margin-bottom: 14px;
     border-radius: 10px;
@@ -27,10 +28,12 @@
     top: 14px;
     right: 14px;
     background-color: transparent;
-    width: 21px;
     height: 21px;
+    width: 72px;
     padding: 0;
     border: none;
+    background-image: url(../../images/savedButton.svg);
+    background-repeat: no-repeat;
 }
 
 .movies-card__button:hover {
@@ -38,25 +41,14 @@
     opacity: 0.8;
 }
 
-.movies-card__button_save {
-    width: 72px;
-    background-color: #313131;
-    color: #FFFFFF;
-    font-family: 'Inter', Helvetica, Arial, sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 10px;
-    line-height: 9px;
-    border-radius: 30px;
-    border: 0;
-}
-
 .movies-card__button_like {
     background-image: url(../../images/save.svg);
+    width: 21px;
 }
 
 .movies-card__button_delete {
-    background-image: url(../../images/delete.svg);   
+    background-image: url(../../images/delete.svg);
+    width: 21px;  
 }
 
 .movies-card__container {

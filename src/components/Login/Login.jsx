@@ -1,46 +1,47 @@
-import { NavLink } from 'react-router-dom';
-import './Login.css';
-import Logo from '../Logo/Logo';
+import { EMAIL_REGEX } from '../../utils/constants';
+import Input from '../Input/Input.jsx';
+import EntryForm from '../EntryForm/EntryForm.jsx';
+import useFormValidation from '../../hooks/useFormValidation.js';
 
-function Login() {
+function Login({ name, onLogin, setIsError }) {
+    const { values, errors, isInputValid, isValid, handleChange } = useFormValidation()
+
+    function onSubmit(e) {
+        e.preventDefault()
+        onLogin(values.email, values.password)
+    }
+
     return (
-        <main className='login'>
-            <div className='login__container'>
-                <Logo />
-                <h1 className='login__title'>Рады видеть!</h1>
-                <form className='login__form' name='login'>
-                    <p className='login__form-input'>
-                        <label className='login__label' htmlFor='email' >E-mail</label>
-                        <input
-                        name='email'
-                        id='email' 
-                        type='email' 
-                        placeholder='Почта'
-                        defaultValue='pochta@yandex.ru'
-                        className='login__input'
-                        required
-                        ></input>
-                        <span className='login__span'></span>
-                        <label className='login__label' htmlFor='password'>Пароль</label>
-                        <input
-                        name='password'
-                        id='password'
-                        type='password' 
-                        placeholder='Пароль' 
-                        className='login__input'
-                        minLength={4}
-                        required
-                        ></input>
-                        <span className='login__span'></span>
-                        <button type='submit' className='login__button'>Войти</button>
-                    </p>
-                </form>
-                <div className='login__question-container'>
-                    <p className='login__question'>Ещё не зарегистрированы?</p>
-                    <NavLink to="/signup" className='login__registration'>Регистрация</NavLink>
-                </div>
-            </div>
-        </main>        
+        <EntryForm name={name} isValid={isValid} onSubmit={onSubmit} setIsError={setIsError}>
+            <Input
+              name='email'
+              title='E-mail'
+              type='email'
+              placeholder={"Электронная почта"}
+              value={values.email}
+              isInputValid={isInputValid.email}
+              error={errors.email}
+              onChange={(e) => {
+                handleChange(e)
+                setIsError(false)
+              }}
+              pattern={EMAIL_REGEX}
+            />
+            <Input
+               name="password"
+               title="Пароль"
+               type="password"
+               placeholder={"Введите пароль"}
+               value={values.password}
+               isInputValid={isInputValid.password}
+               error={errors.password}
+               onChange={(e) => {
+                 handleChange(e)
+                 setIsError(false)
+               }}
+               minLength={4}
+            />
+        </EntryForm>
     )
   }
   

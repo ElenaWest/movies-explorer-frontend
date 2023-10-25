@@ -53,91 +53,6 @@
     cursor: pointer;
     opacity: 0.7;
 }
-.navigation__movies-container {
-    max-width: 676px;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-}
-
-.navigation__movies-list {
-    list-style-type: none;
-    display: flex;
-    margin-top: 28px;
-    margin-bottom: 28px;
-    padding: 0;
-}
-
-.navigation__films {
-    text-decoration: none;
-    color: #FFFFFF;
-    font-family: 'Inter', Helvetica, Arial, sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 13px;
-    line-height: 18px;
-}
-
-.navigation__films:hover {
-    cursor: pointer;
-    opacity: 0.7;
-}
-
-.navigation__saved-films {
-    font-family: 'Inter', Helvetica, Arial, sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    margin-left: 16px;
-    color: #FFFFFF;
-}
-
-.navigation__account {
-    background-color: #313131;
-    height: 24px;
-    border: none;
-    border-radius: 20px;
-    font-family: 'Inter', Helvetica, Arial, sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 16px;
-    margin-top: 18px;
-    color: #FFFFFF;
-    width: 100px;
-    padding: 8px 0 0;
-    text-decoration: none;
-    text-align: center;
-}
-
-.navigation__account:hover {
-    cursor: pointer;
-    opacity: 0.8;
-}
-
-.navigation__movies-burger {
-    display: none;
-}
-
-@media screen and (max-width: 1156px) {
-    .navigation__movies-container {
-        display: none;
-    }
-    .navigation__movies-burger {
-        display: block;
-        background-image: url(../../images/burger.svg);
-        width: 44px;
-        height: 44px;
-        background-color: transparent;
-        border: none;
-        margin-top: 15px;
-    }
-    
-    .navigation__movies-burger:hover {
-        cursor: pointer;
-        opacity: 0.8;
-    }
-  
-  }
 
 @media screen and (max-width: 748px) {
     .navigation__registration {
@@ -154,26 +69,5 @@
     }
     .navigation__container {
         margin-top: 24px;
-    }
-    .navigation__movies-burger {
-        width: 40px;
-        height: 43px;
-        background-size: contain;
-    }
-    .navigation__burger-close {
-        top: 13.44px;
-        right: 13.44px;
-    }
-    .navigation__burger-container {
-        margin-top: 144px;
-    }
-    .navigation__burger-menu-open {
-        max-width: 320px;
-    }
-    .navigation__burger-text {
-        margin-bottom: 24px;
-    }
-    .navigation__account-burger {
-        margin-bottom: 46px;
     }
 }
