@@ -1,38 +1,68 @@
 import { NavLink } from 'react-router-dom';
+import Form from '../Form/Form.jsx';
 import './Profile.css';
+import { useContext, useEffect } from 'react';
+import { EMAIL_REGEX } from '../../utils/constants';
+import Input from '../Input/Input.jsx';
+import useFormValidation from '../../hooks/useFormValidation.js';
+import CurrentUserContext from '../../context/CurrentUserContext.js';
 
-function Profile() {
-    return (
-        <main className='profile'>
-            <h1 className='profile__title'>Привет, Виталий!</h1>
-            <form className='profile__container'>
-                <p className='profile__container-input'>
-                    <label for="name" className='profile__label profile__label-name'>Имя</label>
-                    <input
-                    name='name' 
-                    type='name' 
-                    placeholder='Виталий' 
-                    className='profile__input'
-                    minLength={2}
-                    maxLength={40}
-                    required
-                    ></input>
-                    <label for="email" className='profile__label profile__label-email'>E-mail</label>
-                    <input
-                    name='email' 
-                    type='email' 
-                    placeholder='pochta@yandex.ru' 
-                    className='profile__input'
-                    required
-                    ></input>
-                </p>
-            </form>
-                <button className='profile__edit' type='button'>Редактировать</button>
-                <NavLink to="/" className='profile__log-out'>Выйти из аккаунта</NavLink>        
-                {/* <span className='profile__error'>При обновлении профиля произошла ошибка.</span>
-                <button className='profile__button' type='submit'>Сохранить</button> */}
-        </main>
-        
+function Profile({ name, editUserData, setIsError, logOut, isSuccessful, setSuccessful, setIsEdit, isEdit }) {
+    const currentUser = useContext(CurrentUserContext)
+    const { values, errors, isInputValid, isValid, handleChange, reset } = useFormValidation()
+
+    useEffect(() => {
+        reset({ username: currentUser.name, email: currentUser.email })
+    }, [reset, currentUser, isEdit])
+
+    function onSubmit(e) {
+        e.preventDefault()
+        editUserData(values.username, values.email)
+    }
+
+    return(
+        <section className='profile'>
+            <h1 className='profile__title'>{`Привет, ${currentUser.name}!`}</h1>
+            <Form
+              name={name}
+              isValid={isValid}
+              onSubmit={onSubmit}
+              setIsError={setIsError}
+              values={values}
+              isSuccessful={isSuccessful}
+              setSuccessful={setSuccessful}
+              setIsEdit={setIsEdit}
+              isEdit={isEdit}
+            >
+              <div className='profile__container-input'>
+                <Input 
+                  name='username'
+                  type='text'
+                  title='Имя'
+                  value={values.username}
+                  isInputValid={isInputValid.username}
+                  error={errors.username}
+                  onChange={handleChange}                
+                  minLength={2}
+                  maxLength={40}
+                  selectname={name}
+                />
+                <Input
+                name='email'
+                title='E-mail'
+                type='email'
+                value={values.email}
+                isInputValid={isInputValid.email}
+                error={errors.email}
+                onChange={handleChange}
+                pattern={EMAIL_REGEX}
+                isEdit={isEdit}
+                selectname={name}
+                />
+              </div>               
+            </Form>
+            <NavLink to="/" className='profile__log-out' onClick={logOut}>Выйти из аккаунта</NavLink> 
+        </section>
     )
   }
   

@@ -38,7 +38,7 @@
     opacity: 0.7;
 }
 
-@media screen and (max-width: 717px) {
+@media screen and (max-width: 748px) {
     .navtab__button {
         width: 82px;
         height: 26px;
