@@ -1,7 +1,7 @@
 // URL
 export const URL_BEATFILM_MOVIES = 'https://api.nomoreparties.co/beatfilm-movies'
 export const URL_LOCALHOST = 'http://localhost:3000'
-export const URL_ADRESS = 'api.movies-explorer.nomoredomainsrocks.ru'
+export const URL_ADRESS = 'https://api.movies-explorer.nomoredomainsrocks.ru'
 
 // PATERN
 export const EMAIL_REGEX = "^\\S+@\\S+\\.\\S+$"
