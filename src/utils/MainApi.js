@@ -1,4 +1,4 @@
-import { URL_LOCALHOST } from "./constants";
+import { URL_ADRESS, URL_LOCALHOST } from "./constants";
 
 class ApiMain {
     constructor(options) {

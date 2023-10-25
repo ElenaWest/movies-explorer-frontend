@@ -9,8 +9,8 @@ export const EMAIL_REGEX = "^\\S+@\\S+\\.\\S+$"
 // SIZES
 
 export const MaxScreen = 1280
-export const MediumScreen = 1024
-export const SmallScreen = 650
+export const MediumScreen = 1156
+export const SmallScreen = 748
 export const InitMoreMaxScreen = 16
 export const InitLessMaxScreen = 12
 export const InitMediumScreen = 8
