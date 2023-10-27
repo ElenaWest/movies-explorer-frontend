@@ -1,59 +1,62 @@
-import './Register.css';
-import { NavLink } from 'react-router-dom';
+import { EMAIL_REGEX } from '../../utils/constants';
+import Input from '../Input/Input.jsx';
+import EntryForm from '../EntryForm/EntryForm.jsx';
+import useFormValidation from '../../hooks/useFormValidation.js';
 
-function Register() {
+function Register({ name, onRegister, setIsError }) {
+    const { values, errors, isInputValid, isValid, handleChange } = useFormValidation()
+
+    function onSubmit(e) {
+        e.preventDefault()
+        onRegister(values.username, values.email, values.password)
+    }
+
     return (
-        <main className='register'>
-            <div className='register__container'>
-                <NavLink to="/" className="register__logo" />
-                <h1 className='register__title'>Добро пожаловать!</h1>
-                <form className='register__form'>
-                    <p className='register__form-input'>
-                        <label className='register__label' for='name'>Имя</label>
-                        <input
-                        name='name' 
-                        type='name' 
-                        placeholder='Имя'
-                        defaultValue='Виталий' 
-                        className='register__input'
-                        minLength={2}
-                        maxLength={40}
-                        required
-                        ></input>
-                        <span className='register__span'></span>
-                        <label className='register__label' for='email'>E-mail</label>
-                        <input
-                        name='email' 
-                        type='email' 
-                        placeholder='Почта'
-                        defaultValue='pochta@yandex.ru'
-                        className='register__input'
-                        required
-                        ></input>
-                        <span className='register__span'></span>
-                        <label className='register__label' for='password'>Пароль</label>
-                        <input
-                        name='password' 
-                        type='password' 
-                        placeholder='Пароль' 
-                        className='register__input'
-                        minLength={4}
-                        required
-                        ></input>
-                        <span className='register__span'>Что-то пошло не так...</span>
-                        <button type='submit' className='register__button'>Зарегистрироваться</button>
-                    </p>
-                </form>
-                <div className='register__question-container'>
-                    <p className='register__question'>Уже зарегистрированы?</p>
-                    <NavLink to="/signin" className='register__login'>Войти</NavLink>
-                </div>
-            </div>
-            
-
-                   
-        </main>
-        
+        <EntryForm name={name} isValid={isValid} onSubmit={onSubmit} setIsError={setIsError}>
+            <Input
+              name='username'
+              title='Имя'
+              type='text'
+              placeholder={"Введите имя"}
+              value={values.username}
+              isInputValid={isInputValid.username}
+              error={errors.username}
+              onChange={(e) => {
+                handleChange(e)
+                setIsError(false)
+              }}
+              minLength={2}
+              maxLength={40}
+            />
+            <Input
+              name='email'
+              title='E-mail'
+              type='email'
+              placeholder={"Электронная почта"}
+              value={values.email}
+              isInputValid={isInputValid.email}
+              error={errors.email}
+              onChange={(e) => {
+                handleChange(e)
+                setIsError(false)
+              }}
+              pattern={EMAIL_REGEX}
+            />
+            <Input
+               name="password"
+               title="Пароль"
+               type="password"
+               placeholder={"Введите пароль"}
+               value={values.password}
+               isInputValid={isInputValid.password}
+               error={errors.password}
+               onChange={(e) => {
+                 handleChange(e)
+                 setIsError(false)
+               }}
+               minLength={4}
+            />
+        </EntryForm>
     )
   }
   

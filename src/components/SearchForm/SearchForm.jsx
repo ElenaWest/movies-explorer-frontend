@@ -1,16 +1,55 @@
 import './SearchForm.css';
 import FilterCheckbox from '../FilterCheckbox/FilterCheckbox';
+import { useLocation } from 'react-router-dom';
+import { useContext, useEffect } from 'react';
+import useFormValidation from '../../hooks/useFormValidation.js';
+import ErrorContext from '../../context/ErrorContext.js';
 
-function SearchForm() {
+function SearchForm({ isCheck, changeShort, searchedMovie, searchMovies, setIsError, firstEntry, savedMovies }) {
+    const location = useLocation();
+    const isError = useContext(ErrorContext);
+    const { values, handleChange, reset } = useFormValidation();
+
+    useEffect(() => {
+        if ((location.pathname === '/saved-movies' && savedMovies.length === 0)) {
+            reset({ search: ''})
+        } else {
+            reset({ search: searchedMovie })
+        }
+        setIsError(false)
+    }, [searchedMovie, reset, setIsError, location, savedMovies])
+
+    function onSubmit(e) {
+        e.preventDefault()
+        if (e.target.search.value) {
+            searchMovies(e.target.search.value)
+            setIsError(false)
+        } else {
+            setIsError(true)
+        }
+    }
+
     return(
-        <section className='searchform'>
-            <form className='searchform__container'>
-                <input className='searchform__input' placeholder='Фильм'></input>
-                <button className='searchform__button' type='submit'></button>
+        <section className='search-form'>
+            <form noValidate className='search-form__container' name={'SearchForm'} onSubmit={onSubmit}>
+                <input 
+                className='search-form__input' 
+                placeholder='Фильм'
+                type='text'
+                name='search'
+                value={values.search || ''}
+                onChange={(e) => {
+                  handleChange(e)
+                  setIsError(false)
+                }}
+                disabled={savedMovies ? (savedMovies.length === 0 && true) : false}
+                required
+                ></input>
+                <button className='search-form__button' type='submit'></button>
             </form>
-            <FilterCheckbox />
-        </section>
-        
+            <span className={`search-form__span ${isError && 'search-form__span_active'}`}>Введите ключевое слово</span>
+            <FilterCheckbox isCheck={isCheck} changeShort={changeShort} firstEntry={firstEntry} />
+        </section>        
     );
 }
 

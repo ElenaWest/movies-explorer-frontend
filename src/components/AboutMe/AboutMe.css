@@ -1,11 +1,11 @@
-.aboutme {
+.about-me {
     color: #FFFFFF;
     max-width: 1140px;
     width: 100%;
     margin: 0 auto;
 }
 
-.aboutme__title {
+.about-me__title {
     font-family: 'Inter', Helvetica, Arial, sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -18,12 +18,12 @@
     padding-bottom: 23px;
 }
 
-.aboutme__table {
+.about-me__table {
     margin-top: 66px;
     display: grid;
     grid-template-columns: 600px 270px;
     column-gap: 270px;
-    grid-template-rows: 76px 46px 187px 17px;
+    grid-template-rows: repeat(4, auto);
     grid-template-areas:
     "name photo"
     "status photo"
@@ -31,7 +31,7 @@
     "github photo"
 }
 
-.aboutme__name {
+.about-me__name {
     grid-area: name;
     font-family: 'Inter', Helvetica, Arial, sans-serif;
     font-style: normal;
@@ -43,7 +43,7 @@
     padding-bottom: 18px;
 }
 
-.aboutme__status {
+.about-me__status {
     grid-area: status;
     font-family: 'Inter', Helvetica, Arial, sans-serif;
     font-style: normal;
@@ -54,7 +54,7 @@
     padding-bottom: 26px;  
 }
 
-.aboutme__text {
+.about-me__text {
     grid-area: text;
     font-family: 'Inter', Helvetica, Arial, sans-serif;
     font-style: normal;
@@ -64,7 +64,7 @@
     margin: 0;
 }
 
-.aboutme__github {
+.about-me__github {
     grid-area: github;
     font-family: 'Inter', Helvetica, Arial, sans-serif;
     font-style: normal;
@@ -74,70 +74,72 @@
     text-decoration: none;
     color: #FFFFFF;
     margin: 0;
+    padding-top: 99px;
 }
 
-.aboutme__github:hover {
+.about-me__github:hover {
     cursor: pointer;
     opacity: 0.7;
 }
 
-.aboutme__photo {
+.about-me__photo {
     grid-area: photo;
     max-width: 270px;
     width: 100%;
-    height: 100%;
+    max-height: 327px;
     border-radius: 10px;
     object-fit: cover;
 }
 
-@media screen and (max-width: 1152px) {
-    .aboutme {
+@media screen and (max-width: 1156px) {
+    .about-me {
         max-width: 668px;
     }
-    .aboutme__title {
+    .about-me__title {
         margin-top: 90px;
     }
-    .aboutme__table {
+    .about-me__table {
         grid-template-columns: 364px 255px;
         column-gap: 49px;
-        grid-template-rows: 56px 38px 195px 17px;
     }    
-    .aboutme__name {
+    .about-me__name {
         font-size: 40px;
         line-height: 40px;
         padding-bottom: 16px;
     }    
-    .aboutme__status {
+    .about-me__status {
         font-size: 12px;
         line-height: 18px;
-        padding: 0; 
+        padding-bottom: 20px; 
     }    
-    .aboutme__text {
+    .about-me__text {
         font-size: 12px;
         line-height: 18px;
     }    
-    .aboutme__photo {
+    .about-me__photo {
         max-width: 255px;
-        height: 100%;
+        max-height: 307px;
         border-radius: 10px;
+    }
+    .about-me__github {
+        padding-top: 87px;
     }
 }
 
-@media screen and (max-width: 717px) {
-    .aboutme {
+@media screen and (max-width: 748px) {
+    .about-me {
         max-width: 292px;
     }    
-    .aboutme__title {
+    .about-me__title {
         font-size: 18px;
         line-height: 21.78px;
         margin-top: 70px;
         padding-bottom: 28px;
     }    
-    .aboutme__table {
+    .about-me__table {
         margin-top: 60px;
         grid-template-columns: 292px;
         column-gap: 0px;
-        grid-template-rows: 392px 56px 36px 152px 57px;
         grid-template-areas:
         "photo"
         "name"
@@ -145,24 +147,25 @@
         "text"
         "github"
     }    
-    .aboutme__name {
+    .about-me__name {
         font-size: 30px;
         line-height: 36.31px;
+        padding-top: 40px;
+        padding-bottom: 20px;
     }    
-    .aboutme__status {
+    .about-me__status {
         font-size: 11px;
         line-height: 26px; 
     }    
-    .aboutme__text {
+    .about-me__text {
         font-size: 11px;
         line-height: 16px;
     }    
-    .aboutme__photo {
+    .about-me__photo {
         max-width: 292px;
-        width: 100%;
-        height: 352px;
+        max-height: 352px;
     }
-    .aboutme__github {
+    .about-me__github {
         padding-top: 40px;
     }
 }

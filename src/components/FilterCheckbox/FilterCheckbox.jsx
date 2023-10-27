@@ -1,13 +1,16 @@
 import './FilterCheckbox.css';
 
-function FilterCheckbox() {
+function FilterCheckbox({ isCheck, changeShort, firstEntry }) {
     return(
-        <div className='filtercheckbox__container'>
-            <button
+        <div className='filter-checkbox'>
+            <input
             type='checkbox'
-            className='filtercheckbox__button'
-            ></button>
-        <label className='filtercheckbox__label'>Короткометражки</label>
+            className='filter-checkbox__button'
+            onChange={() => changeShort()}
+            disabled={firstEntry}
+            id='filter-checkbox'
+            />
+        <label className='filter-checkbox__label' htmlFor='filter-checkbox'>Короткометражки</label>
       </div>        
     );
 }
