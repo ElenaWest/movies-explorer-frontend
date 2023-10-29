@@ -100,7 +100,7 @@ function App() {
             if (res) {
               setLoggedIn(false)
               apiMain.authorization(email, password)
-                .then((res) => {
+                .then(res => {
                   localStorage.setItem('jwt', res.token)
                   setLoggedIn(true)
                   navigate('/movies')
