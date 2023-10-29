@@ -5,7 +5,6 @@ import useFormValidation from '../../hooks/useFormValidation.js';
 
 function Login({ name, onLogin, setIsError }) {
     const { values, errors, isInputValid, isValid, handleChange } = useFormValidation()
-    console.log(errors)
 
     function onSubmit(e) {
         e.preventDefault()
