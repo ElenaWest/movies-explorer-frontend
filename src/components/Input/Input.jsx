@@ -20,8 +20,8 @@ function Input({ selectname, name, type, title, value, isInputValid, error, onCh
                 autoComplete='on'
                 disabled={isSend}
                 pattern={pattern}
-                minLength={minLength ? minLength : ''}
-                maxLength={maxLength ? maxLength : ''}
+                minLength={minLength || ''}
+                maxLength={maxLength || ''}
                 required
               />
               <span className='input__span'>{error}</span>
@@ -36,10 +36,10 @@ function Input({ selectname, name, type, title, value, isInputValid, error, onCh
                   className={`profile__input ${isInputValid === undefined || isInputValid ? '' : 'profile__input_invalid'}`}
                   value={value || ''}
                   onChange={onChange}
-                  disabled={isSend}
+                  disabled={isSend || !isEdit}
                   pattern={pattern}
-                  minLength={minLength ? minLength : ''}
-                  maxLength={maxLength ? maxLength : ''}
+                  minLength={minLength || ''}
+                  maxLength={maxLength || ''}
                   required
                 />
               </p>

@@ -46,19 +46,20 @@ function Profile({ name, editUserData, setIsError, logOut, isSuccessful, setSucc
                   minLength={2}
                   maxLength={40}
                   selectname={name}
+                  isEdit={isEdit}
                 />
                 <Input
-                name='email'
-                title='E-mail'
-                type='email'
-                value={values.email}
-                isInputValid={isInputValid.email}
-                error={errors.email}
-                onChange={handleChange}
-                pattern={EMAIL_REGEX}
-                isEdit={isEdit}
-                selectname={name}
-                />
+                  name='email'
+                  title='E-mail'
+                  type='email'
+                  value={values.email}
+                  isInputValid={isInputValid.email}
+                  error={errors.email}
+                  onChange={handleChange}
+                  pattern={EMAIL_REGEX}
+                  isEdit={isEdit}
+                  selectname={name}
+                 />
               </div>               
             </Form>
             <NavLink to="/" className='profile__log-out' onClick={logOut}>Выйти из аккаунта</NavLink> 
