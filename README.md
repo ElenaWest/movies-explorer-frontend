@@ -7,3 +7,6 @@
 ## Ссылка на публичный сервер:
 🠊 https://movies-explorer.cohort66.nomoredomainsrocks.ru/
 🠊 IP 51.250.92.68
+
+## Ссылка на пул-реквест:
+🠊 https://github.com/ElenaWest/movies-explorer-frontend/pull/2
