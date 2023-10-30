@@ -30,7 +30,7 @@
 }
 .filter-checkbox__button + .filter-checkbox__label::before {
     content: '';
-    background-image: url('../../images/TumbON.svg');
+    background-image: url('../../images/TumbOff.svg');
     display: inline-block;
     width: 36px;
     height: 20px;
@@ -51,7 +51,7 @@
 .filter-checkbox__button:checked + .filter-checkbox__label::before {
     width: 36px;
     height: 20px;
-    background-image: url('../../images/TumbOff.svg');
+    background-image: url('../../images/TumbON.svg');
 }
 
 @media screen and (max-width: 1156px) {
