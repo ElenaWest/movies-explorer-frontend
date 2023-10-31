@@ -5,7 +5,7 @@ function FilterCheckbox({ isCheck, changeShort, firstEntry }) {
         <div className='filter-checkbox'>
             <input
             type='checkbox'
-            className='filter-checkbox__button'
+            className={`filter-checkbox__button ${!isCheck ? 'filter-checkbox__button_disable' : ''}`}
             onChange={() => changeShort()}
             disabled={firstEntry}
             id='filter-checkbox'

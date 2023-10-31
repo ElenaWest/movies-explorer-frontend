@@ -30,7 +30,7 @@
 }
 .filter-checkbox__button + .filter-checkbox__label::before {
     content: '';
-    background-image: url('../../images/TumbOff.svg');
+    background-image: url('../../images/TumbON.svg');
     display: inline-block;
     width: 36px;
     height: 20px;
@@ -48,10 +48,10 @@
     opacity: 0.8;
 }
 
-.filter-checkbox__button:checked + .filter-checkbox__label::before {
+.filter-checkbox__button_disable + .filter-checkbox__label::before {
     width: 36px;
     height: 20px;
-    background-image: url('../../images/TumbON.svg');
+    background-image: url('../../images/TumbOff.svg');
 }
 
 @media screen and (max-width: 1156px) {

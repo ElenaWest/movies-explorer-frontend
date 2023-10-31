@@ -2,6 +2,7 @@ import './SavedMovies.css';
 import SearchForm from '../SearchForm/SearchForm.jsx';
 import MoviesCardList from '../MoviesCardList/MoviesCardList.jsx';
 import { useCallback, useEffect, useState } from 'react';
+import { DURATION_SHORT_MOVIE } from '../../utils/constants';
 
 function SavedMovies({ savedMovies, onDelete, setIsError }) {
     const [filteredMovies, setFilteredMovies] = useState(savedMovies);
@@ -13,7 +14,7 @@ function SavedMovies({ savedMovies, onDelete, setIsError }) {
         setSearchedMovie(search)
         setFilteredMovies(movies.filter((item) => {
         const searchName = item.nameRU.toLowerCase().includes(search.toLowerCase())
-        return isCheck ? (searchName && item.duration <= 40) : searchName
+        return isCheck ? (searchName && item.duration <= DURATION_SHORT_MOVIE) : searchName
     }))
 }, [])
 
@@ -31,17 +32,7 @@ useEffect(() => {
     filter(searchedMovie, isCheck, savedMovies)
 }, [filter, savedMovies, isCheck, searchedMovie])
 
-function changeShort() {
-    if (isCheck) {
-        setIsCheck(false)
-        setFirstEntry(false)
-        filter(searchedMovie, false, savedMovies)
-    } else {
-        setIsCheck(true)
-        setFirstEntry(false)
-        filter(searchedMovie, true, savedMovies)
-    }
-}
+
     return(
         <>
         <main className='saved-movies'>
@@ -49,10 +40,12 @@ function changeShort() {
               isCheck={isCheck}
               searchMovies={searchMovies}
               searchedMovie={searchedMovie}
-              changeShort={changeShort}
               setIsError={setIsError}
               firstEntry={firstEntry}
               savedMovies={savedMovies}
+              movies={savedMovies}
+              filter={filter}
+              setIsCheck={setIsCheck}
             />
             <MoviesCardList
               movies={filteredMovies}

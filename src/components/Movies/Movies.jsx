@@ -15,10 +15,10 @@ function Movies({ setIsError, addMovie, savedMovies }) {
     const [firstEntry, setFirstEntry] = useState(true)
 
     const filter = useCallback((search, isCheck, movies) => {
+        setSearchedMovie(search)
         localStorage.setItem('movie', JSON.stringify(search))
         localStorage.setItem('shorts', JSON.stringify(isCheck))
-        localStorage.setItem('allMovies', JSON.stringify(movies))
-        setSearchedMovie(search)
+        localStorage.setItem('allmovies', JSON.stringify(movies))        
         setSelectedMovies(movies.filter((item) => {
             const searchName = item.nameRU.toLowerCase().includes(search.toLowerCase())
             return isCheck ? (searchName && item.duration <= DURATION_SHORT_MOVIE) : searchName
@@ -60,25 +60,17 @@ function Movies({ setIsError, addMovie, savedMovies }) {
         }
     }, [filter])
 
-    function changeShort() {
-        if (isCheck) {
-            setIsCheck(false)
-            filter(searchedMovie, false, allMovies)
-        } else {
-            setIsCheck(true)
-            filter(searchedMovie, true, allMovies)
-        }
-    }
-    
     return(
         <section className='movies'>
           <SearchForm
             isCheck={isCheck}
             searchMovies={searchMovies}
             searchedMovie={searchedMovie}
-            changeShort={changeShort}
             setIsError={setIsError}
             firstEntry={firstEntry}
+            movies={allMovies}
+            filter={filter}
+            setIsCheck={setIsCheck}
           />
           <MoviesCardList
             movies={selectedMovies}

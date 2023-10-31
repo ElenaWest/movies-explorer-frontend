@@ -5,7 +5,7 @@ import { useContext, useEffect } from 'react';
 import useFormValidation from '../../hooks/useFormValidation.js';
 import ErrorContext from '../../context/ErrorContext.js';
 
-function SearchForm({ isCheck, changeShort, searchedMovie, searchMovies, setIsError, firstEntry, savedMovies }) {
+function SearchForm({ isCheck, searchedMovie, searchMovies, setIsError, firstEntry, savedMovies, movies, filter, setIsCheck }) {
     const location = useLocation();
     const isError = useContext(ErrorContext);
     const { values, handleChange, reset } = useFormValidation();
@@ -26,6 +26,16 @@ function SearchForm({ isCheck, changeShort, searchedMovie, searchMovies, setIsEr
             setIsError(false)
         } else {
             setIsError(true)
+        }
+    }
+
+    function changeShort() {
+        if (isCheck) {
+            setIsCheck(false)
+            filter(values.search, false, movies)
+        } else {
+            setIsCheck(true)
+            filter(values.search, true, movies)
         }
     }
 
