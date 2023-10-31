@@ -3,7 +3,7 @@ import MoviesCard from '../MoviesCard/MoviesCard';
 import './MoviesCardList.css';
 import { useEffect, useState } from 'react';
 import printCards from '../../utils/printCards.js';
-import { MediumScreen, SmallScreen, StepMaxScreen, messageErrorMovies, messageErrorMoviesList, messageErrorMoviesSaved, messageErrorNotFound } from '../../utils/constants';
+import { MEDIUM_SCREEN, MESSAGE_ERROR_MOVIES, MESSAGE_ERROR_MOVIES_LIST, MESSAGE_ERROR_MOVIES_SAVED, MESSAGE_ERROR_NOT_FOUND, SMALL_SCREEN, STEP_MAX_SCREEN } from '../../utils/constants';
 import Preloader from '../Preloader/Preloader.jsx';
 
 function MoviesCardList({ movies, onDelete, addMovie, savedMovies, isLoading, serverError, firstEntry }) {
@@ -15,16 +15,16 @@ function MoviesCardList({ movies, onDelete, addMovie, savedMovies, isLoading, se
         if (location.pathname === '/movies') {
             setCount(printCards().init)
             function printCardsForResize() {
-                if (window.innerWidth >= StepMaxScreen) {
+                if (window.innerWidth >= STEP_MAX_SCREEN) {
                     setCount(printCards().init)
                 }
-                if (window.innerWidth < StepMaxScreen) {
+                if (window.innerWidth < STEP_MAX_SCREEN) {
                     setCount(printCards().init)
                 }
-                if (window.innerWidth < MediumScreen) {
+                if (window.innerWidth < MEDIUM_SCREEN) {
                     setCount(printCards().init)
                 }
-                if (window.innerWidth < SmallScreen) {
+                if (window.innerWidth < SMALL_SCREEN) {
                     setCount(printCards().init)
                 }
             }
@@ -60,13 +60,13 @@ function MoviesCardList({ movies, onDelete, addMovie, savedMovies, isLoading, se
                         />
                     )
                     }) : serverError ?
-                      <span className='movies-card-list__span'>{messageErrorMovies}</span>
+                      <span className='movies-card-list__span'>{MESSAGE_ERROR_MOVIES}</span>
                       : !firstEntry ?
-                      <span className='movies-card-list__span'>{messageErrorNotFound}</span>
+                      <span className='movies-card-list__span'>{MESSAGE_ERROR_NOT_FOUND}</span>
                       : location.pathname === '/movies' ?
-                      <span className='movies-card-list__span'>{messageErrorMoviesList}</span>
+                      <span className='movies-card-list__span'>{MESSAGE_ERROR_MOVIES_LIST}</span>
                       :
-                      <span className='movies-card-list__span'>{messageErrorMoviesSaved}</span>
+                      <span className='movies-card-list__span'>{MESSAGE_ERROR_MOVIES_SAVED}</span>
                 }                
             </ul>
             {location.pathname === '/movies' && <button className={`movies-card-list__button ${count >= movies.length && 'movies-card-list__button_hidden'}`} type='button' onClick={clickMoreButton}>Ещё</button>}       

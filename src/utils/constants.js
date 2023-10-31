@@ -8,19 +8,20 @@ export const EMAIL_REGEX = "^\\S+@\\S+\\.\\S+$"
 
 // SIZES
 
-export const MaxScreen = 1280
-export const MediumScreen = 1156
-export const SmallScreen = 748
-export const InitMoreMaxScreen = 16
-export const InitLessMaxScreen = 12
-export const InitMediumScreen = 8
-export const InitSmallScreen = 5
-export const StepMaxScreen = 4
-export const StepMediumScreen = 3
-export const StepSmallScreen = 2
+export const MAX_SCREEN = 1280
+export const MEDIUM_SCREEN = 1156
+export const SMALL_SCREEN = 748
+export const INIT_MORE_MAX_SCREEN = 16
+export const INIT_LESS_MAX_SCREEN = 12
+export const INIT_MEDIUM_SCREEN = 8
+export const INIT_SMALL_SCREEN = 5
+export const STEP_MAX_SCREEN = 4
+export const STEP_MEDIUM_SCREEN = 3
+export const STEP_SMALL_SCREEN = 2
+export const DURATION_SHORT_MOVIE = 40
 
 // ERROR MESSAGES
-export const messageErrorMovies = 'Во время запроса произошла ошибка. Возможно, проблема с соединением или сервер недоступен. Подождите немного и попробуйте ещё раз'
-export const messageErrorNotFound = 'Ничего не найдено 😔'
-export const messageErrorMoviesList = 'Начните поиск, чтобы увидеть список фильмов 🎥'
-export const messageErrorMoviesSaved = 'Добавьте сохраненные фильмы 🎥'
+export const MESSAGE_ERROR_MOVIES = 'Во время запроса произошла ошибка. Возможно, проблема с соединением или сервер недоступен. Подождите немного и попробуйте ещё раз'
+export const MESSAGE_ERROR_NOT_FOUND = 'Ничего не найдено 😔'
+export const MESSAGE_ERROR_MOVIES_LIST = 'Начните поиск, чтобы увидеть список фильмов 🎥'
+export const MESSAGE_ERROR_MOVIES_SAVED = 'Добавьте сохраненные фильмы 🎥'

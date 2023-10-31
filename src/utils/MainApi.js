@@ -97,7 +97,7 @@ class ApiMain {
 }
 
 const apiMain = new ApiMain({
-    baseUrl: URL_ADRESS,
+    baseUrl: URL_LOCALHOST,
 });
 
 
