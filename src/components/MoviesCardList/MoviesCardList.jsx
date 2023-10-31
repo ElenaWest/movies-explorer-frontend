@@ -3,7 +3,13 @@ import MoviesCard from '../MoviesCard/MoviesCard';
 import './MoviesCardList.css';
 import { useEffect, useState } from 'react';
 import printCards from '../../utils/printCards.js';
-import { MEDIUM_SCREEN, MESSAGE_ERROR_MOVIES, MESSAGE_ERROR_MOVIES_LIST, MESSAGE_ERROR_MOVIES_SAVED, MESSAGE_ERROR_NOT_FOUND, SMALL_SCREEN, STEP_MAX_SCREEN } from '../../utils/constants';
+import { MEDIUM_SCREEN, 
+         MESSAGE_ERROR_MOVIES, 
+         MESSAGE_ERROR_MOVIES_LIST, 
+         MESSAGE_ERROR_MOVIES_SAVED, 
+         MESSAGE_ERROR_NOT_FOUND, 
+         SMALL_SCREEN, 
+         STEP_MAX_SCREEN } from '../../utils/constants';
 import Preloader from '../Preloader/Preloader.jsx';
 
 function MoviesCardList({ movies, onDelete, addMovie, savedMovies, isLoading, serverError, firstEntry }) {
@@ -31,7 +37,7 @@ function MoviesCardList({ movies, onDelete, addMovie, savedMovies, isLoading, se
             window.addEventListener('resize', printCardsForResize)
             return() => window.removeEventListener('resize', printCardsForResize)
         }
-    }, [location])
+    }, [location, movies])
 
     function clickMoreButton() {
         setCount(count + printCards().step)
